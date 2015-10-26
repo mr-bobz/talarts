@@ -972,11 +972,11 @@ ul {
 /*
 	Bobby Joseph, 27Oct2015: Horizontal menu in footer, removing social menu
 */
-.menu-footer-menu-container .menu-item{
+.menu-footer-container .menu-item{
 	display: inline;	
 }
 
-.menu-footer-menu-container .menu{
+.menu-footer-container .menu{
 	text-align: right;
 }
 
