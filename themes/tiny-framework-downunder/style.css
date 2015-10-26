@@ -969,5 +969,21 @@ ul {
 	padding-left:5%;
 }
 
+/*
+	Bobby Joseph, 27Oct2015: Horizontal menu in footer, removing social menu
+*/
+.menu-footer-menu-container .menu-item{
+	display: inline;	
+}
 
+.menu-footer-menu-container .menu{
+	text-align: right;
+}
 
+.site-info-2{
+	display: none;
+}
+
+.site-info{
+	max-width: 100%;
+}
