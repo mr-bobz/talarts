@@ -934,13 +934,30 @@ img.header-image,
 
 
 /*
- Bobby Joseph, 26Oct2015: Changing menu background color and padding
+	Bobby Joseph, 26Oct2015: Changing menu background color and padding
 */
-
 .nav-menu{
-	background-color: lightgrey;
+	background-color: #00a3e4;
+	color: white;
 	padding-left: 10px;
 }
+
+/*
+	Bobby Joseph, 26Oct2015: Changing menu color to match background
+*/
+.main-navigation li a{
+	color: white;
+}
+
+.main-navigation .current-menu-item > a{
+	color: gold;
+}
+
+.main-navigation .sub-menu a{
+	background-color: #00a3e4;
+	color: white;
+}
+
 /* Removed border and shadow around images in widget - Ruchita */
 .widget img { 
 	border:none;
@@ -951,3 +968,6 @@ img.header-image,
 ul { 
 	padding-left:5%;
 }
+
+
+
