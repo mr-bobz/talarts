@@ -5,7 +5,7 @@ Author: Downunder Team (OpenAIR 2015)
 Author URI: https://github.com/mr-bobz
 Description: This is a child theme for "Tiny Framework" theme. Please read readme.txt of the parent theme for a quick start guide, tips and tricks. Install tiny-framework parent theme first before activating/using this theme.
 Template: tiny-framework
-Version: 2.1.1
+Version: 1.0.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, accessibility-ready
@@ -940,4 +940,14 @@ img.header-image,
 .nav-menu{
 	background-color: lightgrey;
 	padding-left: 10px;
+}
+/* Removed border and shadow around images in widget - Ruchita */
+.widget img { 
+	border:none;
+	box-shadow:none;
+}
+
+/* Applied Left Padding to unordered list - Ruchita*/
+ul { 
+	padding-left:5%;
 }
