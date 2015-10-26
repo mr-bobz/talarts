@@ -1,9 +1,9 @@
 /*
-Theme Name: Tiny Framework Child Example
-Theme URI: http://mtomas.com/1/
-Author: Tomas Mackevicius
-Author URI: http://mtomas.com/
-Description: Tiny Framework with its child themes was created with the future in mind and encompasses all the best features of the default WordPress themes in one place, adds full accessibility and Schema.org microdata format support. Fast start is ensured with very extensive documentation! Tiny Framework features elegant responsive mobile-first design of Twenty Twelve, HTML5 ready structure of Underscores, many improvements from Twenty Fifteen, custom per-post headers, three footer widgets, FontAwesome icon webfont and Google Fonts support. Web developers will enjoy integrated Theme Hook Alliance custom action hooks. It's all there, you have everything in one neat package. Theme supports Site Logo feature on WordPress.com, that is available with Jetpack plugin for self-hosted sites (can be also installed as a stand-alone plugin). Tiny Framework can be used as a learning tool or your own little web development "framework". With its unique "Coding Tips System" Tiny Framework helps to understand how to extend parent themes and build your own child themes, hacking them the way you want. You get the best coding examples from default WordPress themes and the best hacks from the child theme. Please read readme.txt of a parent theme for a quick start guide, tips and tricks. For more information please see: http://mtomas.com/1/
+Theme Name: Tiny Framework Child - Downunder
+Theme URI: https://github.com/mr-bobz/talarts
+Author: Downunder Team (OpenAIR 2015)
+Author URI: https://github.com/mr-bobz
+Description: This is a child theme for "Tiny Framework" theme. Please read readme.txt of the parent theme for a quick start guide, tips and tricks. Install tiny-framework parent theme first before activating/using this theme.
 Template: tiny-framework
 Version: 2.1.1
 License: GNU General Public License v2 or later
@@ -934,7 +934,7 @@ img.header-image,
 
 
 /*
-custom styles - Bobby
+ Bobby Joseph, 26Oct2015: Changing menu background color and padding
 */
 
 .nav-menu{
