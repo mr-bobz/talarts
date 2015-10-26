@@ -1,0 +1,97 @@
+/*Herin_Title Display on Page : None*/
+.entry-header .entry-title {
+  display: none;
+}
+
+/*Herin _ Change background ok knowbility Logo, footer area*/
+img.alignnone {
+  /**background-color: #01A3E4;*/
+}
+
+/*Herin _ Change background footer area*/
+#colophon.site-footer {
+  background-color: #f5f5f5;
+}
+
+/*Herin_Footer Cell padding*/
+#footer-widgets.three #footer-widget-left {
+  padding: 10px;
+}
+
+#footer-widgets.three #footer-widget-middle {
+  padding: 10px;
+}
+
+#footer-widgets.three #footer-widget-right {
+  padding: 10px;
+}
+
+/*Herin _ Change background Header & Menu area*/
+#primary-menu.nav-menu {
+  background-color: #8bbef5;
+  font-size: 16px;
+  font-family: "Myriad Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", "Liberation Sans", sans-serif;
+  border-width: 0px;
+}
+
+/*Herin*/
+#masthead.site-header {
+  background-color: #fff;
+}
+
+/*Herin*/
+.main-navigation li a {
+  opacity: 1;
+  border-width: 0px;
+  border-style: hidden;
+  padding: 2px;
+  font-size: 16px;
+}
+
+/*Herin*/
+.main-navigation li a:hover {
+  opacity: 1;
+  border-width: 0px;
+  border-style: hidden;
+  padding: 2px;
+  font-size: 16px;
+}
+
+/*Herin*/
+.siteorigin-widget-tinymce.textwidget {
+  background-color: #c2e1e9;
+  padding: 10px;
+}
+
+/*Herin*/
+.site-logo.attachment-full {
+  padding-left: 250px;
+  width: 70%;
+  height: 70%;
+}
+
+/*Herin _ Main navigation hover colour*/
+.main-navigation li ul li {
+  background-color: #7297be;
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+}
+
+img {
+  border: none;
+}
+
+/** Anmol */
+.main-navigation li ul li a:hover {
+  font-size: 14px;
+  text-align: left;
+}
+
+.entry-content img.alignnone:first-child {
+  background-color: #ffffff;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  border: none;
+}
