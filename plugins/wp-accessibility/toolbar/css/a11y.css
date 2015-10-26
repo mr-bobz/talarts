@@ -14,11 +14,13 @@
     /*.a11y-toggle-grayscale { display:none !important; }*/
 }
 
-.a11y-toolbar {
-    position: fixed;
+.a11y-toolbar {	
+    /* Bobby, 27Oct2015: moving position to top-right
+	position: fixed;
     z-index: 99999;
     top: 43%;
-    left: 0;
+    left: 0;*/
+	text-align: right;
 }
 
 .a11y-toolbar ul {
@@ -32,12 +34,18 @@
 .a11y-toolbar ul li {
 	margin: 0;
 	padding: 0;
-    display: block;
+    /* Bobby, 27Oct2015: changing from vertical to horizontal list
+	display: block;
+	*/
+    display: inline;
 }
 
 .a11y-toolbar ul li a {
     font-size: 1.6em;
     padding: .25em;
+	/* Bobby, 27Oct2015: making buttons bigger for easier touch */
+	padding-left: 20px;
+    padding-right: 20px;
 }
 
 .a11y-toolbar a {
@@ -49,7 +57,10 @@
 }
 
 .a11y-toolbar ul li a {
-    display: block;
+    /* Bobby, 27Oct2015: changing from vertical to horizontal list
+	display: block;
+	*/
+    display: inline;
     background: #e2e2e2;
     text-align: center;
     border-top: 1px solid #f5f5f5;
