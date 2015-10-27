@@ -1019,3 +1019,8 @@ ul {
 .entry-header .entry-title {
   display: none;
 }
+
+#logo-slider-wraper{
+	left: 0px !important;
+	margin: auto;
+}
