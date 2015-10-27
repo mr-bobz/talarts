@@ -937,16 +937,35 @@ img.header-image,
 	Bobby Joseph, 26Oct2015: Changing menu background color and padding
 */
 .nav-menu{
-	background-color: #00a3e4;
-	color: white;
+	background-color: #00AEB3;
+	color: black;
 	padding-left: 10px;
+}
+
+.nav-menu .menu-item:hover{
+	background-color: #EFEFEF;
+}
+
+.nav-menu .menu-item{
+	font-size: 14px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.nav-menu .sub-menu .menu-item{
+	padding-right: none;
+}
+
+.nav-menu .menu-item.menu-item-search{
+	transform: translateY(20%);
+	padding-right: 10px;
 }
 
 /*
 	Bobby Joseph, 26Oct2015: Changing menu color to match background
 */
 .main-navigation li a{
-	color: white;
+	color: black;
 }
 
 .main-navigation .current-menu-item > a{
@@ -954,8 +973,9 @@ img.header-image,
 }
 
 .main-navigation .sub-menu a{
-	background-color: #00a3e4;
-	color: white;
+	background-color: #00AEB3;
+	color: black;
+	font-size: 14px;
 }
 
 /* Removed border and shadow around images in widget - Ruchita */
@@ -986,4 +1006,16 @@ ul {
 
 .site-info{
 	max-width: 100%;
+}
+
+/*
+	Bobby Joseph, 27Oct2015: Reducing width of separator between sub menu items
+*/
+.main-navigation ul li ul li{
+	border-bottom: none;
+}
+
+/*Herin: Hiding page titles as it is reduntant, menu and title shows current page */
+.entry-header .entry-title {
+  display: none;
 }
