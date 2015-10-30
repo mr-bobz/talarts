@@ -57,25 +57,11 @@
 			<div id="copyright-widget">
 				<?php dynamic_sidebar( 'sidebar-7' ); ?> 
 			</div>
-			<span class="meta-separator" aria-hidden="true">&bull;</span>
 
 			<?php endif; ?>
-
-			<?php do_action( 'tinyframework_credits' ); // Tip87 - custom action hook, see functions.php ?>
-
-			<?php // Tip61 - Discreet link to WordPress Admin panel in the footer ?>
-
-			<span id="site-admin-link"><?php wp_register('', ''); ?> <?php wp_loginout(); ?></span>
-
+			
 		</div><!-- .site-info -->
 		
-		<div class="site-info-2">
-
-			<?php // Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 ?>
-
-			<?php get_template_part( 'inc/menu', 'social' ); ?>
-			
-		</div><!-- .site-info-2 -->
 
 		<?php tha_footer_bottom(); // custom action hook ?>
 

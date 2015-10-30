@@ -62,15 +62,19 @@
 
 		<div class="site-branding" itemscope itemtype="http://schema.org/WPHeader">
 
-			<?php // Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details.
+			<span title="Home"><?php // Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details.
 			tinyframework_the_site_logo();
-			?>
+			?></span>
 
 			<!-- Bobby, 27Oct2015: Adding social menu in header to match design --> 
 			<div class="site-info-3">
 				<?php // Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 ?>
 				<?php get_template_part( 'inc/menu', 'social' ); ?>		
 			</div><!-- .site-info-3 -->
+			
+			<div class="elist">
+				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Subscribe to TALA Newsletters" class="btn btn-custom-black" target="_blank">Join E-List</a>
+			</div>
 			
 			<div id="site-title-wrapper">
 
