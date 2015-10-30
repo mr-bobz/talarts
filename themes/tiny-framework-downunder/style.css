@@ -586,8 +586,6 @@ blockquote cite:before {
 /* Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details. */
 
 /* Enable Site Logo in mobile view */
-
-/*
 .site-branding {
 	margin-top: 12px;
 	margin-top: 0.75rem;
@@ -611,7 +609,7 @@ blockquote cite:before {
 .site-header .site-description {
 	text-align: left;
 }
-*/
+
 
 /* Tip06 - Custom headers for posts and pages. Uncomment following CSS rules to disable border and shadow on main header: */
 
@@ -1015,11 +1013,14 @@ ul {
 	border-bottom: none;
 }
 
-/*Herin: Hiding page titles as it is reduntant, menu and title shows current page */
+/*	Herin: Hiding page titles as it is reduntant, menu and title shows current page */
 .entry-header .entry-title {
   display: none;
 }
 
+/*
+	Bobby Joseph, 27Oct2015: Centering the logo slider
+*/
 #logo-slider-wraper{
 	left: 0px !important;
 	margin: auto;

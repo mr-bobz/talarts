@@ -65,11 +65,11 @@
 			<?php // Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details.
 			tinyframework_the_site_logo();
 			?>
-			
+
 			<!-- Bobby, 27Oct2015: Adding social menu in header to match design --> 
 			<div class="site-info-3">
 				<?php // Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 ?>
-				<?php get_template_part( 'inc/menu', 'social' ); ?>			
+				<?php get_template_part( 'inc/menu', 'social' ); ?>		
 			</div><!-- .site-info-3 -->
 			
 			<div id="site-title-wrapper">
@@ -176,5 +176,8 @@
 	</header><!-- .site-header -->
 
 	<?php tha_header_after(); // custom action hook ?>
-
+	
+	<!-- Bobby, 29Oct2015: Adding navigation breadcrumb --> 
+	<?php if ( function_exists('yoast_breadcrumb') ) 
+	{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 	<div id="content" class="site-content">
