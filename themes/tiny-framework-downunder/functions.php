@@ -125,12 +125,12 @@ add_filter( 'the_title', 'tinyframework_the_title_trim' );
 
 // First we have to remove the parent theme function that inserts Footer credits. If you just want to hide credits, that's all you need to do.
 
-/*
+
 function tinyframeworkchild_remove_parent_theme_credits() {
 	remove_action( 'tinyframework_credits', 'tinyframework_display_credits' );
 }
 add_action( 'init', 'tinyframeworkchild_remove_parent_theme_credits' );
-*/
+
 
 // Now we can insert our own Footer credits.
 

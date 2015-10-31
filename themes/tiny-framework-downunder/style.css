@@ -935,14 +935,16 @@ img.header-image,
 	Bobby Joseph, 26Oct2015: Changing menu background color and padding
 */
 .nav-menu{
-	background-color: #00AEB3;
-	color: black;
+	/*background-color: #231f20;*/
+	background-image: linear-gradient(#5b5b5b, #282828);
+	color: #00AEB3;
 	padding-left: 10px;
+	font-weight: bold;
 }
 
-.nav-menu .menu-item:hover{
+/*.nav-menu .menu-item:hover{
 	background-color: #EFEFEF;
-}
+}*/
 
 .nav-menu .menu-item{
 	font-size: 14px;
@@ -957,23 +959,43 @@ img.header-image,
 .nav-menu .menu-item.menu-item-search{
 	transform: translateY(20%);
 	padding-right: 10px;
+	margin-top: 0px;
 }
 
 /*
 	Bobby Joseph, 26Oct2015: Changing menu color to match background
 */
 .main-navigation li a{
-	color: black;
+	color: inherit;
 }
 
-.main-navigation .current-menu-item > a{
-	color: gold;
+.main-navigation li ul li a{
+	border: none;	
+}
+
+.main-navigation li a:hover,
+.main-navigation li a:focus{
+	color: #EAF2F2;
+}
+
+.main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .main-navigation .current_page_item > a, .main-navigation .current_page_ancestor > a{
+	color: #E86928;
 }
 
 .main-navigation .sub-menu a{
-	background-color: #00AEB3;
-	color: black;
+	background-image: none;
+	background-color: #231f20;
 	font-size: 14px;
+}
+
+.main-navigation .sub-menu a:hover,
+.main-navigation .sub-menu a:focus{
+	background-image: linear-gradient(#5b5b5b, #282828);
+	color: #EAF2F2;
+}
+
+.main-navigation .sub-menu .menu-item{
+	background-color: #231f20;
 }
 
 /* Removed border and shadow around images in widget - Ruchita */
@@ -1022,11 +1044,62 @@ ul {
 	margin: auto;
 }
 
+/*
+	Bobby Joseph, 31Oct2015: Positioning elist button
+*/
 .elist{
 	text-align: right;
 }
 
+
+/*
+	Bobby Joseph, 31Oct2015: Reducing font-size
+*/
 body, button, input, select, textarea{
 	font-size: 14px;
     font-size: 0.875rem;
+}
+
+
+/*
+	Bobby Joseph, 31Oct2015: Circle buttons for main entry points - home page
+*/
+.member,
+.volunteer,
+.support{
+	border-radius: 50%;
+	width: 200px;
+	height: 200px; 
+	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #006666, #83CDBC);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);*/	
+	background-color: #006666;
+	text-align: center;
+    padding-top: 70px;
+    display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+	color:white;
+}
+
+.member:hover,
+.volunteer:hover,
+.support:hover,
+.member:focus,
+.volunteer:focus,
+.support:focus{
+	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #E86928 0%, #EE2C3C 100%, #6E7F81 95%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #E86928, #EE2C3C);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #E86928 0%, #EE2C3C 100%, #6E7F81 95%);*/
+	color: #e86928;
+}
+
+.member{
+	background-image: url("images/member.png");
+}
+.volunteer{
+	background-image: url("images/volunteer.png");
+}
+.support{
+	background-image: url("images/support.png");
 }
