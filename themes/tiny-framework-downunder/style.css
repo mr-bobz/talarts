@@ -1073,13 +1073,17 @@ body, button, input, select, textarea{
 	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #006666, #83CDBC);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);*/	
-	background-color: #006666;
+	/*background-color: #006666;*/
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, #00aeb3, pink);
+	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
+	box-shadow: 05px 05px 0px teal;
 	text-align: center;
-    padding-top: 70px;
+    padding-top: 50px;
     display: inline-block;
 	font-weight: bold;
 	font-size: 20px;
-	color:white;
+	color: black;
 }
 
 .member:hover,
@@ -1091,9 +1095,10 @@ body, button, input, select, textarea{
 	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #E86928 0%, #EE2C3C 100%, #6E7F81 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #E86928, #EE2C3C);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #E86928 0%, #EE2C3C 100%, #6E7F81 95%);*/
-	color: #e86928;
+	color: white;
 }
 
+/*
 .member{
 	background-image: url("images/member.png");
 }
@@ -1103,3 +1108,21 @@ body, button, input, select, textarea{
 .support{
 	background-image: url("images/support.png");
 }
+*/
+
+.site-footer{
+    padding-right: 10px;
+    margin-bottom: 40px;
+	background: none;
+    background-color: lightgrey;
+}
+
+.site{
+	background-color: linen;
+	background-image: url("images/page_background.png");
+}
+
+.site-header .search-form [type="search"], .site-header .search-form [type="text"]{
+	background-image: url("images/search.svg") !important;
+}
+
