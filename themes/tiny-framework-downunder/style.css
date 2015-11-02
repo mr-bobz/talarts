@@ -1077,6 +1077,7 @@ body, button, input, select, textarea{
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #00aeb3, pink);
 	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
+	background-image: -ms-radial-gradient(80% 20%, circle cover, #00aeb3, pink 100%, red 95%);
 	box-shadow: 05px 05px 0px teal;
 	text-align: center;
     padding-top: 50px;
