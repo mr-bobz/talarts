@@ -297,7 +297,7 @@ add_action( 'after_setup_theme', 'tinyframeworkchild_custom_header_setup' );
  */
 function tinyframeworkchild_add_search_to_wp_menu ( $items, $args ) {
 	if( 'primary' === $args -> theme_location ) {
-	$items .= '<li class="menu-item menu-item-search">' . get_search_form(false) . '</li>';
+	$items .= '<li class="menu-item menu-item-search" aria-label="search">' . get_search_form(false) . '</li>';
 	}
 	return $items;
 }

@@ -56,7 +56,7 @@
 
 	<?php tha_header_before(); // custom action hook ?>
 
-	<header id="masthead" class="site-header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+	<header id="masthead" class="site-header" role="banner" aria-label="page banner" itemscope itemtype="http://schema.org/WPHeader">
 
 		<?php tha_header_top(); // custom action hook ?>
 
@@ -64,16 +64,10 @@
 
 			<span title="Home"><?php // Tip14 - Site Logo plugin/feature support. Check: inc/plugin-compatibility.php for more details.
 			tinyframework_the_site_logo();
-			?></span>
-
-			<!-- Bobby, 27Oct2015: Adding social menu in header to match design --> 
-			<div class="site-info-3">
-				<?php // Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 ?>
-				<?php get_template_part( 'inc/menu', 'social' ); ?>		
-			</div><!-- .site-info-3 -->
-			
-			<div class="elist">
-				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Subscribe to TALA Newsletters" class="btn btn-custom-black" target="_blank">Join E-List</a>
+			?></span>			
+			<div class="header-widget-right">
+				<div class="elist-description">Join our e-list&nbsp;</div>
+				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Subscribe to TALA Newsletters (opens new window)" class="btn btn-custom-black" target="_blank" aria-label="Opens New Window">Sign Up Now</a>
 			</div>
 			
 			<div id="site-title-wrapper">
@@ -110,13 +104,18 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Menu', 'tinyframework' ); ?>" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'tinyframework' ); ?></h2>
+			<!--
+				The header tag <h> need to be in order #69
+				https://github.com/mr-bobz/talarts/issues/69
+				Bobby: 05Nov2015, removing unnecessary h2. h1 starts with breadcrumb
+				<h2 class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'tinyframework' ); ?></h2>
+			-->
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'tinyframework' ); ?></button>
 
 			<?php // Search form for mobile menu ?>
 
 			<div class="search-box-wrapper search-container-mobile">
-				<div class="search-box">
+				<div class="search-box" aria-label="search">
 					<?php get_search_form(); ?>
 				</div>
 			</div>
@@ -182,6 +181,6 @@
 	<?php tha_header_after(); // custom action hook ?>
 	
 	<!-- Bobby, 29Oct2015: Adding navigation breadcrumb --> 
-	<?php if ( function_exists('yoast_breadcrumb') ) 
-	{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
-	<div id="content" class="site-content">
+	<h1 role="region" aria-label="breadcrumb navigation"><?php if ( function_exists('yoast_breadcrumb') ) 
+	{yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?></h1>
+	<div id="content" aria-label="main content" class="site-content">

@@ -49,6 +49,11 @@
 		</div><!-- #footer-widgets -->
 	
 		<div class="site-info">
+		
+			<div class="site-info-3">
+				<?php // Tip85 - Add Social Media Menu. Read more: http://justintadlock.com/archives/2013/08/14/social-nav-menus-part-2 ?>
+				<?php get_template_part( 'inc/menu', 'social' ); ?>		
+			</div><!-- .site-info-3 -->
 
 			<?php // Footer copyright widget area - use standard WordPress text widget with something like this: &copy; 2015 Your Name. All rights reserved ?>
 

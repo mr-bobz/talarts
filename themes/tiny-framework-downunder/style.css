@@ -285,8 +285,6 @@ blockquote cite:before {
  * 7z extension was non added because it produces error, most likelly because of lack of MIME type support on some servers:
  * https://stackoverflow.com/questions/18562580/possible-to-add-mime-type-to-web-config-without-possibly-breaking-the-site
  */
-
-/*
 .content-area a[href$=pdf]:before,
 .content-area a[href$=doc]:before,
 .content-area a[href$=docx]:before,
@@ -328,7 +326,6 @@ blockquote cite:before {
 	color: #428f27;
 	content: "\f1c6";
 }
-*/
 
 /* Do not add file type icon to buttons */
 
@@ -596,6 +593,7 @@ blockquote cite:before {
 	margin: 5px 24px 0 0;
 	margin: 0.3125rem 1.5rem 0 0;
 }
+/*
 #site-title-wrapper {
 	padding: 12px 0 12px 12px;
 	padding: 0.75rem 0 0.75rem 0.75rem;
@@ -609,7 +607,7 @@ blockquote cite:before {
 .site-header .site-description {
 	text-align: left;
 }
-
+*/
 
 /* Tip06 - Custom headers for posts and pages. Uncomment following CSS rules to disable border and shadow on main header: */
 
@@ -835,10 +833,10 @@ img.header-image,
 	.site-logo {
 		
 	}
-	#site-title-wrapper {
+	/*#site-title-wrapper {
 		padding-top: 0;
 		margin-bottom: 0;
-	}
+	}*/
 
 	/* Tip88 - Customize color scheme: Site Title and Description - can also be changed via Admin > Appearance > Customizer */
 
@@ -967,6 +965,11 @@ img.header-image,
 */
 .main-navigation li a{
 	color: inherit;
+	/*
+		Menu _ Upper case letters need to be changed to Capitalised. #63
+		https://github.com/mr-bobz/talarts/issues/63
+	*/
+	text-transform: none;
 }
 
 .main-navigation li ul li a{
@@ -1031,11 +1034,6 @@ ul {
 	border-bottom: none;
 }
 
-/*	Herin: Hiding page titles as it is reduntant, menu and title shows current page */
-.entry-header .entry-title {
-  display: none;
-}
-
 /*
 	Bobby Joseph, 27Oct2015: Centering the logo slider
 */
@@ -1047,10 +1045,13 @@ ul {
 /*
 	Bobby Joseph, 31Oct2015: Positioning elist button
 */
-.elist{
+.header-widget-right{
 	text-align: right;
 }
 
+.elist-description{
+	font-size: 16px;
+}
 
 /*
 	Bobby Joseph, 31Oct2015: Reducing font-size
@@ -1127,3 +1128,37 @@ body, button, input, select, textarea{
 	background-image: url("images/search.svg") !important;
 }
 
+/*
+	JAWS set focus on the title of the page and announce it #67
+	https://github.com/mr-bobz/talarts/issues/67
+*/
+#site-title-wrapper{
+	display: none;
+}
+
+/*
+	Focus Visible Issue _ The focus indicator need to be highlighted a bit more. #61
+	https://github.com/mr-bobz/talarts/issues/61
+*/
+:focus {
+	outline: red 3px dotted !important;
+}
+
+/*
+	Reduce Space between the breadcrumbs and main content #73
+	https://github.com/mr-bobz/talarts/issues/73
+*/
+.content-area{
+	margin: 0px;
+}
+
+
+.entry-content h2{
+	font-size: 25px;
+}
+
+/*	Herin: Hiding page titles as it is reduntant, menu and title shows current page */
+.site-main .entry-header,
+.site-main .page-header{
+	display:none;
+}
