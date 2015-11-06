@@ -1162,3 +1162,12 @@ body, button, input, select, textarea{
 .site-main .page-header{
 	display:none;
 }
+
+/*
+	Link to underline on focus #117
+	https://github.com/mr-bobz/talarts/issues/117
+*/
+a:hover,
+a:focus{
+	text-decoration: underline;
+}

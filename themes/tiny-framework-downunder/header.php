@@ -67,7 +67,7 @@
 			?></span>			
 			<div class="header-widget-right">
 				<div class="elist-description">Join our e-list&nbsp;</div>
-				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Subscribe to TALA Newsletters (opens new window)" class="btn btn-custom-black" target="_blank" aria-label="Opens New Window">Sign Up Now</a>
+				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Sign Up Now (opens new window to 3rd party site)" class="btn btn-custom-black" target="_blank" aria-label="Opens New Window">Sign Up Now</a>
 			</div>
 			
 			<div id="site-title-wrapper">
