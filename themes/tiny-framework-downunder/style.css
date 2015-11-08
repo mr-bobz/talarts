@@ -934,8 +934,8 @@ img.header-image,
 */
 .nav-menu{
 	/*background-color: #231f20;*/
-	background-image: linear-gradient(#5b5b5b, #282828);
-	color: #00AEB3;
+	background-image: linear-gradient(#00c0ce, #00a3af);
+	color: black;
 	padding-left: 10px;
 	font-weight: bold;
 }
@@ -978,27 +978,27 @@ img.header-image,
 
 .main-navigation li a:hover,
 .main-navigation li a:focus{
-	color: #EAF2F2;
+	color: white;
 }
 
 .main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .main-navigation .current_page_item > a, .main-navigation .current_page_ancestor > a{
-	color: #E86928;
+	color: darkblue;
 }
 
 .main-navigation .sub-menu a{
 	background-image: none;
-	background-color: #231f20;
+	background-color: #00c0ce;
 	font-size: 14px;
 }
 
 .main-navigation .sub-menu a:hover,
 .main-navigation .sub-menu a:focus{
-	background-image: linear-gradient(#5b5b5b, #282828);
-	color: #EAF2F2;
+	background-image: linear-gradient(#00c0ce, #00a3af);
+	color: white;
 }
 
 .main-navigation .sub-menu .menu-item{
-	background-color: #231f20;
+	background-color: #00c0ce;
 }
 
 /* Removed border and shadow around images in widget - Ruchita */
@@ -1047,10 +1047,13 @@ ul {
 */
 .header-widget-right{
 	text-align: right;
+	display: inline-block;
+    float: right;
 }
 
 .elist-description{
 	font-size: 16px;
+	white-space: nowrap;
 }
 
 /*
@@ -1065,16 +1068,10 @@ body, button, input, select, textarea{
 /*
 	Bobby Joseph, 31Oct2015: Circle buttons for main entry points - home page
 */
-.member,
-.volunteer,
-.support{
+.support{	
 	border-radius: 50%;
 	width: 200px;
 	height: 200px; 
-	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);
-	background-image: -webkit-radial-gradient(45px 45px, circle cover, #006666, #83CDBC);
-	background-image: radial-gradient(45px 45px 45deg, circle cover, #006666 0%, #83CDBC 100%, #E86928 95%);*/	
-	/*background-color: #006666;*/
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #00aeb3, pink);
 	background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
 	background-image: radial-gradient(45px 45px 45deg, circle cover, #00aeb3 0%, pink 100%, red 95%);
@@ -1085,14 +1082,57 @@ body, button, input, select, textarea{
     display: inline-block;
 	font-weight: bold;
 	font-size: 20px;
-	color: black;
+	color: black;	
 }
 
-.member:hover,
+.entry-point-section{
+	background-image: url('images/law_background.jpg');
+	background-repeat: repeat;	
+	background-attachment: fixed;
+}
+
+.entry-point-container{
+	width: 300px;
+	height: 300px;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+
+.entry-point{
+	margin: 10%;
+    height: 80%;
+    width: 80%;
+	display: inline-block;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;		
+}
+
+.entry-point-container:hover .entry-point,
+.entry-point-container:focus .entry-point{
+	-webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.volunteer{
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	background-image: url("images/volunteer.png");
+}
+
 .volunteer:hover,
+.volunteer:focus{
+	background-image: url("images/volunteer_hover.png");	
+}
+
 .support:hover,
-.member:focus,
-.volunteer:focus,
 .support:focus{
 	/*background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, #E86928 0%, #EE2C3C 100%, #6E7F81 95%);
 	background-image: -webkit-radial-gradient(45px 45px, circle cover, #E86928, #EE2C3C);
@@ -1170,4 +1210,29 @@ body, button, input, select, textarea{
 a:hover,
 a:focus{
 	text-decoration: underline;
+}
+
+/*
+	The events pagination links fail colour contrast #87
+	https://github.com/mr-bobz/talarts/issues/87
+*/
+.nav-links a, .nav-links a:visited{
+	color: #933100;
+}
+
+
+.posted-on, .byline, .cat-links, .tags-links, .comments-link, .edit-link, .entry-format, .full-size-link{
+	color: #565656;
+}
+
+a{
+	color: black;
+}
+
+/*
+	https://github.com/mr-bobz/talarts/issues/143
+	Headings in all caps need to be changed as this is a potential accessibility concern. #143
+*/
+.widget-title{
+	text-transform: none;
 }
