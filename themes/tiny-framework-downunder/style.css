@@ -1062,6 +1062,11 @@ ul {
 body, button, input, select, textarea{
 	font-size: 14px;
     font-size: 0.875rem;
+	/*
+		Contact page _ Email ids not wrapping inside the cell in small screen device #144
+		https://github.com/mr-bobz/talarts/issues/144
+	*/
+	word-wrap: break-word;
 }
 
 
@@ -1236,3 +1241,61 @@ a{
 .widget-title{
 	text-transform: none;
 }
+
+
+.donate-text{
+    position: absolute;
+    z-index: 3;
+    margin-left: 25px;
+    margin-top: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.donate-text:hover,
+.donate-text:focus{
+	color: yellow;
+}
+
+.donate {
+    position: relative;
+    width: 100px;
+    height: 75px;
+	margin-top: 10px;
+}
+.donate:before,
+.donate:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+.donate:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
