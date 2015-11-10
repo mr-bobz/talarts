@@ -3,9 +3,17 @@ console.debug("custom.js loaded from /themes/tiny-framework-downunder/js");
 jQuery(document).ready(function($) { 
 	console.debug("jQuery - page ready.....");
 	
-	//Site-hacks via jQuery
+	/*   Site hacks jQuery - BEGIN   */
 	$("#breadcrumbs").attr('role', 'region');	
 	
+	//Tool Tip needed for the Accessibility Tool bar buttons #159
+	//https://github.com/mr-bobz/talarts/issues/159
+	//Bobby: 10Nov2015, adding tooltip/title for accessibility toolbar buttons
+	$(".a11y-toolbar .toggle-contrast").prop('title', "Toggle High Contrast");
+	$(".a11y-toolbar .toggle-grayscale").prop('title', "Toggle Grayscale");
+	$(".a11y-toolbar .toggle-fontsize").prop('title', "Toggle Font size");
+	
+	/*   Site hacks jQuery - END   */
 
 	/*   EQUAL BLOCKS - BEGIN   */
 	//Same height rows for responsive grids
