@@ -183,6 +183,6 @@
 	<?php tha_header_after(); // custom action hook ?>
 	
 	<!-- Bobby, 29Oct2015: Adding navigation breadcrumb --> 
-	<h1 role="region" aria-label="breadcrumb navigation"><?php if ( function_exists('yoast_breadcrumb') ) 
+	<h1 aria-label="breadcrumb navigation"><?php if ( function_exists('yoast_breadcrumb') ) 
 	{yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?></h1>
 	<div id="content" aria-label="main content" class="site-content">

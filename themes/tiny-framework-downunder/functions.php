@@ -210,14 +210,22 @@ function tinyframeworkchild_scripts_styles() {
 	wp_enqueue_style( 'tinyframework-style' );
 	wp_enqueue_style( 'tinyframeworkchild-style' );
     
+	//Mustan: 09Nov2015, moving menu script loading to child theme
     // 5.6 - Add JavaScript for handling the navigation menu hide-and-show behavior.
 	wp_enqueue_script( 'tinyframework-navigation',
-	//get_template_directory_uri() . '/js/navigation.js',
-    '/wp-content/themes/tiny-framework-downunder/js/navigation.js',
+	get_stylesheet_directory_uri() . '/js/navigation.js',
 	array(),
 	'2.1.1',
 	true ); // Loading script in the footer for a better performance
 
+	//Bobby: 10Nov2015, Adding custom script loading
+	wp_enqueue_script( 'tinyframework-custom',
+	get_stylesheet_directory_uri() . '/js/custom.js',
+	array(),
+	'2.1.1',
+	true ); // Loading script in the footer for a better performance
+	
+	
 	// Below is an example how to enqueue the script.
 
 	/*

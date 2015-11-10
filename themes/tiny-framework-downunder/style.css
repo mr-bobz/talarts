@@ -982,7 +982,8 @@ img.header-image,
 }
 
 .main-navigation .current-menu-item > a, .main-navigation .current-menu-ancestor > a, .main-navigation .current_page_item > a, .main-navigation .current_page_ancestor > a{
-	color: darkblue;
+	text-decoration: underline;
+	color: white;
 }
 
 .main-navigation .sub-menu a{
@@ -1102,6 +1103,7 @@ body, button, input, select, textarea{
 	display: block;
 	overflow: hidden;
 	text-align: center;
+	margin-top: 10px;
 }
 
 .entry-point{
@@ -1246,32 +1248,27 @@ a{
 .donate-text{
     position: absolute;
     z-index: 3;
-    margin-left: 25px;
-    margin-top: 25px;
-    color: white;
+    margin-left: 30px;
+    margin-top: 20px;
     font-weight: bold;
-}
-
-.donate-text:hover,
-.donate-text:focus{
-	color: yellow;
 }
 
 .donate {
     position: relative;
     width: 100px;
-    height: 75px;
+    height: 60px;
 	margin-top: 10px;
+	margin-left: 15px;
 }
 .donate:before,
 .donate:after {
     position: absolute;
     content: "";
-    left: 50px;
+    left: 40px;
     top: 0;
-    width: 50px;
-    height: 80px;
-    background: red;
+    width: 40px;
+    height: 60px;
+    background: pink;
     -moz-border-radius: 50px 50px 0 0;
     border-radius: 50px 50px 0 0;
     -webkit-transform: rotate(-45deg);
@@ -1299,3 +1296,6 @@ a{
             transform-origin :100% 100%;
 }
 
+.textwidget .wp-video{
+	margin: auto !important;
+}
