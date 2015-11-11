@@ -361,18 +361,6 @@ blockquote cite:before {
 	font-weight: bold;
 }
 
- /** this is to alter height of accordian content */
-.ui-widget-content{
-	height:auto !important;
-}
-
-/** clear margin below the accordian, as default margin is getting added */
-.ui-accordion .ui-accordion-header{
-	margin-bottom:0px !important;
-	font-size: 18px;
-}
-
-
 /* 4.3 Twitter Bootstrap style buttons */
 
 
@@ -1189,7 +1177,7 @@ body, button, input, select, textarea{
 }
 
 .site{
-	background-color: linen;
+	background-color: white;
 	background-image: url("images/page_background.png");
 }
 
@@ -1336,3 +1324,15 @@ a{
     margin-bottom: 100px;
     font-style: italic;	
 }
+
+ /** this is to alter height of accordian content */
+.ui-widget-content{
+	height:auto !important;
+}
+
+/** clear margin below the accordian, as default margin is getting added */
+.ui-accordion .ui-accordion-header{
+	margin-bottom:0px !important;
+	font-size: 18px;
+}
+

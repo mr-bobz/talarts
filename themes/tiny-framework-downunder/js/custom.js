@@ -14,6 +14,10 @@ jQuery(document).ready(function($) {
 	$(".a11y-toolbar .toggle-grayscale").prop('title', "Toggle Grayscale");
 	$(".a11y-toolbar .toggle-fontsize").prop('title', "Toggle Font size");
 	
+	//Transcript Link for the Video Editor #162
+	//https://github.com/mr-bobz/talarts/issues/162
+	$(".video-transcript-link").attr('aria-label', "Transcript for the video of Nicole Elmer and Blair Dancy talking about TALA services");
+	
 	/*   Site hacks jQuery - END   */
 
 	/*   EQUAL BLOCKS - BEGIN   */
