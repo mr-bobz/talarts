@@ -487,6 +487,16 @@ blockquote cite:before {
 	color: #ff6111;
 }
 
+
+.entry-content{
+	padding-left: 1.5%;
+	padding-right:1.5%;
+	padding-top:1.5%;
+}
+
+.entry-meta{
+	display: none;
+}
 /* 5.3 Post, archive navigation */
 
 /* Tip27 - Uncomment next code line to disable "previous article - next article" navigation below the content of a post */
