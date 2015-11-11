@@ -5,6 +5,7 @@ jQuery(document).ready(function($) {
 	
 	/*   Site hacks jQuery - BEGIN   */
 	$("#breadcrumbs").attr('role', 'region');	
+	$("#breadcrumbs").attr('aria-label', 'breadcrumb navigation');	
 	
 	//Tool Tip needed for the Accessibility Tool bar buttons #159
 	//https://github.com/mr-bobz/talarts/issues/159

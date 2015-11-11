@@ -67,7 +67,7 @@
 			?></span>			
 			<div class="header-widget-right">
 				<div class="elist-description">Join our e-list&nbsp;</div>
-				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Sign Up Now (opens new window to 3rd party site)" class="btn btn-custom-black" target="_blank">Sign Up Now</a>
+				<a href="http://visitor.r20.constantcontact.com/d.jsp?llr=67lifhpab&p=oi&m=1115858153373&sit=lxc8balib&f=b119c4d1-f7ba-41c3-a67b-2afc56cca4fd" title="Sign Up Now (opens new window to 3rd party site)" aria-label="opens new window to 3rd party site" class="btn btn-custom-black" target="_blank">Sign Up Now</a>
 				<a href="/support/donate/" title="Donate"><div class="donate-text">Donate</div>
 				<div class="donate"></div></a>
 			</div>
@@ -183,6 +183,6 @@
 	<?php tha_header_after(); // custom action hook ?>
 	
 	<!-- Bobby, 29Oct2015: Adding navigation breadcrumb --> 
-	<h1 aria-label="breadcrumb navigation"><?php if ( function_exists('yoast_breadcrumb') ) 
+	<h1><?php if ( function_exists('yoast_breadcrumb') ) 
 	{yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?></h1>
 	<div id="content" aria-label="main content" class="site-content">

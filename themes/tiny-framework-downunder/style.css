@@ -1299,3 +1299,18 @@ a{
 .textwidget .wp-video{
 	margin: auto !important;
 }
+
+.video-transcript-link{
+	display: block;
+    text-align: center;
+}
+
+.mejs-controls .mejs-offscreen{
+	display: none !important;
+}
+
+.search-error{
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-style: italic;	
+}
