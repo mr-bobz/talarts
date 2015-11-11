@@ -1,0 +1,32 @@
+#dgx-donate-container{
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: #0096a1 !important;
+}
+
+#dgx-donate-form-donation-section,
+#dgx-donate-form-tribute-section,
+#dgx-donate-form-donor-section, 
+#dgx-donate-form-payment-section, 
+#dgx-donate-form-billing-section{
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-color: #ffffff !important;	
+}
+
+.dgx-donate-comment{
+	color:#505050 !important;
+}
+
+.seamless-donations-forms-error-message, .seamless-donations-error-message-field{
+	background-color: #ffffff !important;
+	color: red !important;
+}
+
+.dgx-donate-form-section label{
+	width: 200px !important;
+}
+
+#donation_options{
+	border: none;
+}
