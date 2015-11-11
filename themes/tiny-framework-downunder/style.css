@@ -366,6 +366,12 @@ blockquote cite:before {
 	height:auto !important;
 }
 
+/** clear margin below the accordian, as default margin is getting added */
+.ui-accordion .ui-accordion-header{
+	margin-bottom:0px !important;
+	font-size: 18px;
+}
+
 
 /* 4.3 Twitter Bootstrap style buttons */
 
