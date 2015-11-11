@@ -361,6 +361,12 @@ blockquote cite:before {
 	font-weight: bold;
 }
 
+ /** this is to alter height of accordian content */
+.ui-widget-content{
+	height:auto !important;
+}
+
+
 /* 4.3 Twitter Bootstrap style buttons */
 
 
