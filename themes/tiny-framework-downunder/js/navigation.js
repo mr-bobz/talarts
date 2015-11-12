@@ -87,7 +87,7 @@
 	//keep-end
 	//jQuery("#primary-menu").children("li").find('ul').css('visibility','hidden');
 	jQuery("#primary-menu").removeAttr('aria-expanded');
-    jQuery("#site-navigation").attr("aria-label","Primary Menu. To navigate the menu with JAWS, turn JAWS Virtual Cursor Mode Off and use the arrow keys. For more screen reader information visit the accessibility link in the footer");
+    jQuery("#site-navigation").attr("aria-label","Primary Menu");
 	
 	subMenuItemsLength = jQuery("ul.sub-menu").children();
 	var posinset = 1
@@ -128,7 +128,7 @@
 		//KEEP Menu jQuery(links[i]).parent().parent().attr("role","group");
 		jQuery(links[i]).parent().parent().attr("role","menu");
 		jQuery(links[i]).parent().attr('role','presentation');
-		jQuery(topMenuItemList[0]).removeAttr('role');
+		//jQuery(topMenuItemList[0]).removeAttr('role');
 		if(!jQuery(links[i]).parent().parent().hasClass('nav-menu')){
 			links[i].setAttribute("tabindex","-1");		
 		}
