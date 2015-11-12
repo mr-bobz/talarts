@@ -55,7 +55,7 @@ get_header(); ?>
 							https://github.com/mr-bobz/talarts/issues/157
 						-->	
 						<!--?<php get_template_part( 'template-parts/content', 'none' ); ?> -->
-						<h2 class="search-error">No results found! Please try again with a different search keyword.</h2>
+						<h2 class="search-error" tabindex=0>No results found! Please try again with a different search keyword.</h2>
 
 					<?php endif; // end have_posts() check ?>
 				
@@ -65,7 +65,7 @@ get_header(); ?>
 							https://github.com/mr-bobz/talarts/issues/157
 						-->	
 						<!--?<php get_template_part( 'template-parts/content', 'none' ); ?> -->
-						<h2 class="search-error">No search input was provided! Please try again with a different search keyword.</h2>
+						<h2 class="search-error" tabindex=0>No search input was provided! Please try again with a different search keyword.</h2>
 
 				<?php endif; // end get_search_query() check ?>	
 

@@ -1315,7 +1315,9 @@ a{
     text-align: center;
 }
 
-.mejs-controls .mejs-offscreen{
+/* style overrides for media player */
+.mejs-controls .mejs-offscreen,
+.mejs-controls .mejs-captions-button .mejs-captions-selector{
 	display: none !important;
 }
 
@@ -1335,4 +1337,3 @@ a{
 	margin-bottom:0px !important;
 	font-size: 18px;
 }
-
