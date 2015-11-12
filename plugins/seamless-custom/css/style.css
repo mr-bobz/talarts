@@ -24,9 +24,12 @@
 }
 
 .dgx-donate-form-section label{
-	width: 200px !important;
+	width:180px !important;
 }
 
-#donation_options{
-	border: none;
+#donation_options, 
+#tribute_gift_info,
+#donor_info,
+#donor_info_address{
+	border-color: #ffffff;
 }

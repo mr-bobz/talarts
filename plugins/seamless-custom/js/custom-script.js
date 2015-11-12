@@ -5,9 +5,6 @@ jQuery(document).ready(function(){
  * Donation Information 
  */
 
-	jQuery('#_dgx_donate_repeating').find('p').text('');
-	jQuery('#_dgx_donate_repeating').find('p').append('<input aria-labelledby="Repeating checkbox" name="_dgx_donate_repeating" id="dgx-donate-repeating" type="checkbox"><label for="_dgx_donate_repeating" style="width:auto!important;">I would like this donation to automatically repeat each month </label>');
-
 	jQuery('#dgx_donate_giving_level_500').prepend('<br/>');
 	jQuery('#dgx_donate_giving_level_1000').prepend('<br/>');
 	jQuery('#dgx_donate_giving_level_2500').prepend('<br/>');
@@ -20,6 +17,13 @@ jQuery(document).ready(function(){
 	jQuery('input[value=2500]').attr('id', '_dgx_donate_giving_level_2500');
 	jQuery('input[value=5000]').attr('id', '_dgx_donate_giving_level_5000');
 
+	jQuery('input[value=100]').attr('name', '_dgx_donate_giving_level_100');
+	jQuery('input[value=500]').attr('name', '_dgx_donate_giving_level_500');
+	jQuery('input[value=1000]').attr('name', '_dgx_donate_giving_level_1000');
+	jQuery('input[value=2500]').attr('name', '_dgx_donate_giving_level_2500');
+	jQuery('input[value=5000]').attr('name', '_dgx_donate_giving_level_5000');
+	jQuery('input[id=dgx-donate-other-radio]').attr('name', 'dgx-donate-other-radio');
+
 	jQuery('input[value=100]').attr('aria-labelledby', 'Friend ($100)');
 	jQuery('input[value=500]').attr('aria-labelledby', 'Sponsor ($500)');
 	jQuery('input[value=1000]').attr('aria-labelledby', 'Patron ($1000)');
@@ -27,50 +31,38 @@ jQuery(document).ready(function(){
 	jQuery('input[value=5000]').attr('aria-labelledby', 'Angel ($5000)');
 	jQuery('input[id=dgx-donate-other-radio]').attr('aria-labelledby', 'Other');
 
-	var $header = jQuery('#header_desc').html();
-	var $level100 = jQuery('#dgx_donate_giving_level_100').html();
-	var $level500 = jQuery('#dgx_donate_giving_level_500').html();
-	var $level1000 = jQuery('#dgx_donate_giving_level_1000').html();
-	var $level2500 = jQuery('#dgx_donate_giving_level_2500').html();
-	var $level5000 = jQuery('#dgx_donate_giving_level_5000').html();
-	var $levelOther = jQuery('#other_radio_button').html();
 
-	jQuery('#header_desc').remove();
-	jQuery('#dgx_donate_giving_level_100').remove();
-	jQuery('#dgx_donate_giving_level_500').remove();
-	jQuery('#dgx_donate_giving_level_1000').remove();
-	jQuery('#dgx_donate_giving_level_2500').remove();
-	jQuery('#dgx_donate_giving_level_5000').remove();
-	jQuery('#other_radio_button').remove();
-	
-	jQuery('#dgx-donate-form-donation-section').append('<fieldset id="donation_options">');
-	jQuery('#donation_options').append($header);
-	jQuery('#donation_options').append($level100);
-	jQuery('#donation_options').append($level500);
-	jQuery('#donation_options').append($level1000);
-	jQuery('#donation_options').append($level2500);
-	jQuery('#donation_options').append($level5000);
-	jQuery('#donation_options').append($levelOther);
+	jQuery('#dgx-donate-form-donation-section').wrapInner('<fieldset id="donation_options">');
+	jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
+	jQuery('#donation_options').children('#donation_header').prependTo('#dgx-donate-form-donation-section');
+
+	jQuery('#_dgx_donate_repeating').find('p').text('');
+	jQuery('#_dgx_donate_repeating').find('p').append('<input aria-labelledby="Repeating checkbox" name="_dgx_donate_repeating" id="_dgx-donate-repeating" type="checkbox"><label for="_dgx_donate_repeating" style="width:auto!important;">I would like this donation to automatically repeat each month </label>');
+
+
 /**
  * Tribute Gift 
  */
 
+	jQuery('#dgx-donate-form-tribute-section').children('#donation_header').children('h2').wrapInner('<legend>');
+	jQuery('#dgx-donate-form-tribute-section').wrapInner('<fieldset id="tribute_gift_info">');
+	
+
 	jQuery('#_dgx_donate_tribute_gift').text('');
-	jQuery('#_dgx_donate_tribute_gift').append('<input id="dgx-donate-tribute" type="checkbox" data-check="_dgx_donate_honor_by_email" data-conceal=".postal-acknowledgement, .conceal-state, .conceal-postcode, .conceal-province" data-reveal=".in-honor" name="_dgx_donate_tribute_gift" aria-labelledby="Mailing-list checkbox"><label for="_dgx_donate_tribute_gift" style="width:auto !important;"> Check here to donate in honor or memory of someone</label>');
+	jQuery('#_dgx_donate_tribute_gift').append('<input id="dgx-donate-tribute" type="checkbox" data-check="_dgx_donate_honor_by_email" data-conceal=".postal-acknowledgement, .conceal-state, .conceal-postcode, .conceal-province" data-reveal=".in-honor" name="_dgx_donate_tribute_gift" aria-labelledby="Mailing-list checkbox"><label for="dgx-donate-tribute" style="width:auto !important;"> Check here to donate in honor or memory of someone</label>');
+
 
 	jQuery('#_dgx_donate_memorial_gift').text('');
-	jQuery('#_dgx_donate_memorial_gift').append('<div id="_dgx_donate_memorial_gift-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input type="checkbox" name="_dgx_donate_memorial_gift" aria-labelledby="Memorial gift checkbox"><label for="_dgx_donate_memorial_gift" style="width:auto !important;">Check here if this is a memorial gift</label>');
+	jQuery('#_dgx_donate_memorial_gift').append('<div id="_dgx_donate_memorial_gift-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input id="_dgx_donate_memorial_gift_checkbox" type="checkbox" name="_dgx_donate_memorial_gift" aria-labelledby="Memorial gift checkbox"><label for="_dgx_donate_memorial_gift_checkbox" style="width:auto !important;">Check here if this is a memorial gift</label>');
 
 	jQuery('#_dgx_donate_honor_by_email').text('');
-	jQuery('#_dgx_donate_honor_by_email').append('<div id="_dgx_donate_honor_by_email-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input type="radio" data-conceal=".postal-acknowledgement, .conceal-state, .conceal-postcode, .conceal-province" data-reveal=".email-acknowledgement" value="TRUE" checked="checked" name="_dgx_donate_honor_by_email" aria-labelledby="Honor by email radio"><label for="_dgx_donate_honor_by_email" style="width:auto !important;">Send acknowledgement via email</label>');
+	jQuery('#_dgx_donate_honor_by_email').append('<div id="_dgx_donate_honor_by_email-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input id="_dgx_donate_honor_by_email_checkbox" type="radio" data-conceal=".postal-acknowledgement, .conceal-state, .conceal-postcode, .conceal-province" data-reveal=".email-acknowledgement" value="TRUE" checked="checked" name="_dgx_donate_honor_by_email_radio" aria-labelledby="Honor by email radio"><label for="_dgx_donate_honor_by_email_radio" style="width:auto !important;">Send acknowledgement via email radio button</label>');
 
 	jQuery('#_dgx_donate_honor_by_post_mail').text('');
-	jQuery('#_dgx_donate_honor_by_post_mail').append('<div id="_dgx_donate_honor_by_post_mail-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input type="radio" data-conceal=".email-acknowledgement" data-reveal=".postal-acknowledgement" value="FALSE" name="_dgx_donate_honor_by_email" aria-labelledby="Honor by email radio"><label for="_dgx_donate_honor_by_email" style="width:auto !important;">Send acknowledgement via postal mail</label>');
+	jQuery('#_dgx_donate_honor_by_post_mail').append('<div id="_dgx_donate_honor_by_post_mail-error-message" class="seamless-donations-error-message-field" style="display:none"></div><input id="_dgx_donate_honor_by_post_mail_radio" type="radio" data-conceal=".email-acknowledgement" data-reveal=".postal-acknowledgement" value="FALSE" name="_dgx_donate_honor_by_post_mail_radio" aria-labelledby="Honor by postal mail radio button"><label for="_dgx_donate_honor_by_post_mail_radio" style="width:auto !important;">Send acknowledgement via postal mail</label>');
 
 	jQuery('input[name=_dgx_donate_memorial_gift]').attr('aria-labelledby', 'Memorial gift checkbox');
-
-	jQuery('input[name=_dgx_donate_honor_by_email]').attr('aria-labelledby', 'Honor by email radio');
-	jQuery('input[name=_dgx_donate_honoree_email_name]').attr('aria-labelledby', 'Honoree email name radio');
+	jQuery('input[name=_dgx_donate_honoree_email_name]').attr('aria-labelledby', 'Honoree email name');
 	jQuery('input[name=_dgx_donate_honoree_email]').attr('aria-labelledby', 'Honoree email label');
 
 
@@ -97,14 +89,20 @@ jQuery(document).ready(function(){
 /*
  * Donor Information 
  */
+	jQuery('#dgx-donate-form-donor-section').children('#donation_header').children('h2').wrapInner('<legend>');
+	jQuery('#dgx-donate-form-donor-section').wrapInner('<fieldset id="donor_info">');
+	
+	jQuery('#dgx-donate-form-donor-section').children('#donation_header', '#_dgx_donate_donor_first_name', '#_dgx_donate_donor_last_name', '#_dgx_donate_donor_email', '#_dgx_donate_add_to_mailing_list', '#_dgx_donate_donor_phone').wrapAll('<fieldset id="donor-info" />');
 
-	jQuery('#_dgx_donate_donor_first_name').find('label').replaceWith('<label for="_dgx_donate_donor_first_name">First Name: <span class="dgx-donate-comment">(required)</span></label>');
+	jQuery('#_dgx_donate_donor_first_name').find('label').replaceWith('<label for="_dgx_donate_donor_first_name">First Name: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	jQuery('#_dgx_donate_donor_last_name').find('label').replaceWith('<label for="_dgx_donate_donor_last_name">Last Name: <span class="dgx-donate-comment">(required)</span></label>');
+	jQuery('#_dgx_donate_donor_last_name').find('label').replaceWith('<label for="_dgx_donate_donor_last_name">Last Name: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	jQuery('#_dgx_donate_donor_email').find('label').replaceWith('<label for="_dgx_donate_donor_email">Email: <span class="dgx-donate-comment">(required)</span></label>');
+	jQuery('#_dgx_donate_donor_email').find('label').replaceWith('<label for="_dgx_donate_donor_email">Email: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	jQuery('#_dgx_donate_donor_phone').find('label').replaceWith('<label for="_dgx_donate_donor_phone">Phone: <span class="dgx-donate-comment">(required)</span></label>');
+	//jQuery('#_dgx_donate_donor_phone').find('label').replaceWith('<label for="_dgx_donate_donor_phone">Phone: </label><span class="dgx-donate-comment">(required)</span></label>');
+
+	jQuery('#_dgx_donate_add_to_mailing_list').contents().eq(2).wrap('<label for="_dgx_donate_add_to_mailing_list" />')
 
 	jQuery('input[name=_dgx_donate_donor_first_name]').attr('id', '_dgx_donate_donor_first_name');
 	jQuery('input[name=_dgx_donate_donor_last_name]').attr('id', '_dgx_donate_donor_last_name');
@@ -128,13 +126,14 @@ jQuery(document).ready(function(){
 /**
  * Donor Address 
  */
+	jQuery('#dgx-donate-form-billing-section').children('#donation_header').children('h2').wrapInner('<legend>');
+	jQuery('#dgx-donate-form-billing-section').wrapInner('<fieldset id="donor_info_address">');
+	
 
-	jQuery('#_dgx_donate_donor_address').find('label').replaceWith('<label for="_dgx_donate_donor_address">Address: <span class="dgx-donate-comment">(required)</span></label>');
+	jQuery('#_dgx_donate_donor_address').find('label').replaceWith('<label for="_dgx_donate_donor_address">Address: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	jQuery('#_dgx_donate_donor_city').find('label').replaceWith('<label for="_dgx_donate_donor_city">City: <span class="dgx-donate-comment">(required)</span></label>');	
+	jQuery('#_dgx_donate_donor_city').find('label').replaceWith('<label for="_dgx_donate_donor_city">City: </label><span class="dgx-donate-comment">(required)</span></label>');	
 
-
-	jQuery('#_dgx_donate_donor_address2').find('label').replaceWith('<label for="_dgx_donate_donor_address2">Address 2: <span class="dgx-donate-comment">(optional)</span></label>');
 
 	jQuery('input[name=_dgx_donate_donor_address]').attr('id', '_dgx_donate_donor_address');
 	jQuery('input[name=_dgx_donate_donor_address2]').attr('id', '_dgx_donate_donor_address2');
