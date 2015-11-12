@@ -25,6 +25,14 @@ function seamless_custom_queue_jQuery  () {
 
 add_action( 'wp_enqueue_scripts','seamless_custom_queue_jQuery');
 
+function seamless_custom_queue_angular  () {
+	
+	wp_enqueue_script( 'seemless_custom_angular', plugins_url( '/js/form_focus.js' , __FILE__ ));
+	
+}
+
+add_action( 'wp_enqueue_scripts','seamless_custom_queue_angular');
+
 function seamless_custom_queue_stylesheet () {
 
 	$style_url = plugins_url ( '/css/style.css', __FILE__ );
@@ -60,34 +68,3 @@ function modify_donation_level_name($array){
 }
 
 add_filter( 'seamless_donations_form_donation_section', 'modify_donation_level_name'); 
-
-function modify_seamless_donations_get_donation_section($array){
-	$array['elements']['header_desc']['before'] = '<p><legend>';
-	$array['elements']['header_desc']['after'] = '</legend></p>';
-
-	return $array;
-}
-
-add_filter('seamless_donations_form_donation_section','modify_seamless_donations_get_donation_section'); 
-
-/**
-function modify_seamless_donations_get_donor_section($array) {
-	$array['elements']['_dgx_donate_donor_first_name']['before'] = esc_html__ ('First Name:', 'seamless-donations') . "<span class='dgx-donate-comment'>" . esc_html__ ('(required)') . "</span>";
-
-	return $array;
-}
-
-add_filter('seamless_donations_form_donor_section', 'modify_seamless_donations_get_donor_section');
-
-function modify_seamless_donations_get_billing_section ($array) {
-	
-	$array['elements']['_dgx_donate_donor_address']['before'] = esc_html__ ('Address: ', 'seamless-donations') . "<span class='dgx-donate-comment'>" . esc_html__ ('(required)')."</span>";
-
-	$array['elements']['_dgx_donate_donor_city']['before'] = esc_html__ ( 'City: ', 'seamless-donations' ). "<span class='dgx-donate-comment'>". esc_html__ ('(required)')."</span>";
-
-	return $array;
-}
-
-add_filter('seamless_donations_form_billing_section', 'modify_seamless_donations_get_billing_section');
-
-*/

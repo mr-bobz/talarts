@@ -100,7 +100,7 @@ jQuery(document).ready(function(){
 
 	jQuery('#_dgx_donate_donor_email').find('label').replaceWith('<label for="_dgx_donate_donor_email">Email: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	//jQuery('#_dgx_donate_donor_phone').find('label').replaceWith('<label for="_dgx_donate_donor_phone">Phone: </label><span class="dgx-donate-comment">(required)</span></label>');
+	jQuery('#_dgx_donate_donor_phone').find('label').replaceWith('<label for="_dgx_donate_donor_phone">Phone: </label><span class="dgx-donate-comment">(required)</span></label>');
 
 	jQuery('#_dgx_donate_add_to_mailing_list').contents().eq(2).wrap('<label for="_dgx_donate_add_to_mailing_list" />')
 
@@ -109,6 +109,17 @@ jQuery(document).ready(function(){
 	jQuery('input[name=_dgx_donate_donor_email]').attr('id', '_dgx_donate_donor_email');
 	jQuery('input[name=_dgx_donate_donor_phone]').attr('id', '_dgx_donate_donor_phone');
 	jQuery('input[name=_dgx_donate_add_to_mailing_list]').attr('id', '_dgx_donate_add_to_mailing_list');
+
+	jQuery('input[name=_dgx_donate_donor_first_name]').attr('required', 'required');
+	jQuery('input[name=_dgx_donate_donor_last_name]').attr('required', 'required');
+	jQuery('input[name=_dgx_donate_donor_email]').attr('required', 'required');
+	jQuery('input[name=_dgx_donate_donor_phone]').attr('required', 'required');
+
+
+	jQuery('input[name=_dgx_donate_donor_first_name]').attr('ng-model', 'first_name');
+	jQuery('input[name=_dgx_donate_donor_last_name]').attr('ng-model', 'last_name');
+	jQuery('input[name=_dgx_donate_donor_email]').attr('ng-model', 'email');
+	jQuery('input[name=_dgx_donate_donor_phone]').attr('ng-model', 'phone');
 
 
 	jQuery('input[name=_dgx_donate_donor_first_name]').attr('aria-labelledby', 'Firstname label');
@@ -141,6 +152,12 @@ jQuery(document).ready(function(){
 	jQuery('input[name=_dgx_donate_donor_zip]').attr('id', '_dgx_donate_donor_zip');
 	jQuery('select[name=_dgx_donate_donor_state]').attr('id', '_dgx_donate_donor_state'); 				
 	jQuery('select[name=_dgx_donate_donor_country]').attr('id', '_dgx_donate_donor_country');
+
+	jQuery('input[name=_dgx_donate_donor_address]').attr('ng-model', 'address');
+	jQuery('input[name=_dgx_donate_donor_city]').attr('ng-model', 'city');
+
+	jQuery('input[name=_dgx_donate_donor_address]').attr('required', 'required');
+	jQuery('input[name=_dgx_donate_donor_city]').attr('required', 'required');
 
 	jQuery('input[name=_dgx_donate_donor_address]').attr('aria-labelledby', 'address label');
 	jQuery('input[name=_dgx_donate_donor_address2]').attr('aria-labelledby', 'address2 label');
