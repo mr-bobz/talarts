@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 	
 	/*   Site hacks jQuery - BEGIN   */
 	$("#breadcrumbs").attr('role', 'region');	
-	$("#breadcrumbs").attr('aria-label', 'breadcrumb navigation');	
+	$("#breadcrumbs").attr('aria-label', 'Breadcrumb Navigation');	
 	
 	//Tool Tip needed for the Accessibility Tool bar buttons #159
 	//https://github.com/mr-bobz/talarts/issues/159
@@ -17,6 +17,11 @@ jQuery(document).ready(function($) {
 	//Transcript Link for the Video Editor #162
 	//https://github.com/mr-bobz/talarts/issues/162
 	$(".video-transcript-link").attr('aria-label', "Transcript for the video of Nicole Elmer and Blair Dancy talking about TALA services");
+	
+	//Membership Page & other long pages #147
+	//https://github.com/mr-bobz/talarts/issues/147
+	$("#memberships").attr('role', 'region');	
+	$("#memberships").attr('aria-label', 'Document Navigation');	
 	
 	/*   Site hacks jQuery - END   */
 
