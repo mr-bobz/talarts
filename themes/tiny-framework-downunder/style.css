@@ -1214,11 +1214,11 @@ body, button, input, select, textarea{
 	font-size: 25px;
 }
 
-/*	Herin: Hiding page titles as it is reduntant, menu and title shows current page */
+/*	Herin: Hiding page titles as it is reduntant, menu and title shows current page 
 .site-main .entry-header,
 .site-main .page-header{
 	display:none;
-}
+}*/
 
 /*
 	Link to underline on focus #117
@@ -1339,9 +1339,13 @@ a{
 }
 
 .main-navigation .focus > ul {
-		display : block!important;
+	display : block !important;
 }
 
 .main-navigation ul.nav-menu ul.sub-menu {
-		display : none;
+	display : none;
+}
+
+#breadcrumbs{
+	background-color: linen;
 }

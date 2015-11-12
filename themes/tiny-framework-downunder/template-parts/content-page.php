@@ -18,9 +18,9 @@
 			The header tag <h> need to be in order #69
 			We are not displaying entry-header, since it is already part of breadcrumb
 		-->				
-		<!--<header class="entry-header">
-			?<php the_title( '<h2 class="entry-title" itemprop="headline">', '</h2>' ); ?>
-		</header> -->
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title" id="header-h1" itemprop="headline">', '</h1>' ); ?>
+		</header> 
 
 
 		<div class="entry-content" itemprop="articleBody">

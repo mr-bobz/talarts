@@ -77,7 +77,7 @@
 				<?php
 					if ( is_front_page() && is_home() ) : ?>
 
-						<h1 class="site-title" itemprop="headline"><?php bloginfo( 'name' ); ?></h1>
+						<h1 id="header-h1" class="site-title" itemprop="headline"><?php bloginfo( 'name' ); ?></h1>
 
 					<?php else : ?>
 
@@ -110,7 +110,7 @@
 				The header tag <h> need to be in order #69
 				https://github.com/mr-bobz/talarts/issues/69
 				Bobby: 05Nov2015, removing unnecessary h2. h1 starts with breadcrumb
-				<h2 class="screen-reader-text"><?php esc_html_e( 'Primary Menu', 'tinyframework' ); ?></h2>
+				<h2 class="screen-reader-text">?<php esc_html_e( 'Primary Menu', 'tinyframework' ); ?></h2>
 			-->
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'tinyframework' ); ?></button>
 
@@ -183,6 +183,6 @@
 	<?php tha_header_after(); // custom action hook ?>
 	
 	<!-- Bobby, 29Oct2015: Adding navigation breadcrumb --> 
-	<h1><?php if ( function_exists('yoast_breadcrumb') ) 
-	{yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?></h1>
+	<?php if ( function_exists('yoast_breadcrumb') ) 
+	{yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?>
 	<div id="content" aria-label="main content" class="site-content">
