@@ -1337,3 +1337,11 @@ a{
 	margin-bottom:0px !important;
 	font-size: 18px;
 }
+
+.main-navigation .focus > ul {
+		display : block!important;
+}
+
+.main-navigation ul.nav-menu ul.sub-menu {
+		display : none;
+}
