@@ -1338,6 +1338,8 @@ a{
 	font-size: 18px;
 }
 
+@media screen and (min-width: 783px) {
+    
 .main-navigation .focus > ul {
 	display : block !important;
 }
@@ -1346,6 +1348,7 @@ a{
 	display : none;
 }
 
+}
 #breadcrumbs{
 	background-color: linen;
 }
