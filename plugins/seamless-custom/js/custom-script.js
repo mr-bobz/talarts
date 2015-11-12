@@ -36,13 +36,22 @@ jQuery(document).ready(function(){
 	jQuery('input[value=5000]').attr('aria-labelledby', 'Angel ($5000)');
 	jQuery('input[id=dgx-donate-other-radio]').attr('aria-labelledby', 'Other');
 	
-	var $legend = '<div id="header_desc"><div id="header_desc-error-message" class="seamless-donations-error-message-field" style="display:none"></div><p><legend>I would like to make a donation in the amount of:</legend></p>'
+	var $legend = '<div id="header_desc"><div id="header_desc-error-message" style="display:none" class="seamless-donations-error-message-field"></div><p><legend>I would like to make a donation in the amount of:</legend</p></div>';
+
+	jQuery('#dgx-donate-form-donation-section').remove('#header_desc');
 
 	
 	jQuery('#dgx-donate-form-donation-section').wrapInner('<fieldset id="donation_options">');
 	
 //jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
 	jQuery('#donation_options').children('#donation_header').prependTo('#dgx-donate-form-donation-section');
+
+
+	var $checkbox = '<div id="_dgx_donate_repeating"><div id="_dgx_donate_repeating-error-message" class="seamless-donations-error-message-field" style="display:none"></div><p><input id="_dgx-donate-repeating" type="checkbox" name="_dgx_donate_repeating" aria-labelledby="Repeating checkbox"><label style="width:auto!important;" for="_dgx-donate-repeating">I would like this donation to automatically repeat each month </label></p></div>';
+	
+	jQuery('#donation_options').children('div').remove();
+	jQuery('#donation_options').prepend($legend);
+	jQuery('#dgx-donate-form-donation-section').append($checkbox);
 
 	jQuery('#_dgx_donate_repeating').find('p').text('');
 	jQuery('#_dgx_donate_repeating').find('p').append('<input aria-labelledby="Repeating checkbox" name="_dgx_donate_repeating" id="_dgx-donate-repeating" type="checkbox"><label for="_dgx-donate-repeating" style="width:auto!important;">I would like this donation to automatically repeat each month </label>');
