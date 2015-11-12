@@ -4,6 +4,7 @@ jQuery(document).ready(function(){
 /**
  * Donation Information 
  */
+	jQuery('#other_radio_button').contents().eq(2).wrap('<label for="dgx-donate-other-radio" />');
 
 	jQuery('#dgx_donate_giving_level_500').prepend('<br/>');
 	jQuery('#dgx_donate_giving_level_1000').prepend('<br/>');
@@ -31,13 +32,25 @@ jQuery(document).ready(function(){
 	jQuery('input[value=5000]').attr('aria-labelledby', 'Angel ($5000)');
 	jQuery('input[id=dgx-donate-other-radio]').attr('aria-labelledby', 'Other');
 
+	var $legend = '<div id="header_desc"><div id="header_desc-error-message" style="display:none" class="seamless-donations-error-message-field"></div><p><legend>I would like to make a donation in the amount of:</legend</p></div>';
 
+	jQuery('#dgx-donate-form-donation-section').remove('#header_desc');
+
+// set the fieldset
 	jQuery('#dgx-donate-form-donation-section').wrapInner('<fieldset id="donation_options">');
-	jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
+	
+///////jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
 	jQuery('#donation_options').children('#donation_header').prependTo('#dgx-donate-form-donation-section');
 
+		
+	var $checkbox = '<div id="_dgx_donate_repeating"><div id="_dgx_donate_repeating-error-message" class="seamless-donations-error-message-field" style="display:none"></div><p><input id="_dgx-donate-repeating" type="checkbox" name="_dgx_donate_repeating" aria-labelledby="Repeating checkbox"><label style="width:auto!important;" for="_dgx-donate-repeating">I would like this donation to automatically repeat each month </label></p></div>';
+	
+	jQuery('#donation_options').children('div').remove();
+	jQuery('#donation_options').prepend($legend);
+	jQuery('#dgx-donate-form-donation-section').append($checkbox);
+
 	jQuery('#_dgx_donate_repeating').find('p').text('');
-	jQuery('#_dgx_donate_repeating').find('p').append('<input aria-labelledby="Repeating checkbox" name="_dgx_donate_repeating" id="_dgx-donate-repeating" type="checkbox"><label for="_dgx_donate_repeating" style="width:auto!important;">I would like this donation to automatically repeat each month </label>');
+	jQuery('#_dgx_donate_repeating').find('p').append('<input aria-labelledby="Repeating checkbox" name="_dgx_donate_repeating" id="_dgx-donate-repeating" type="checkbox"><label for="_dgx-donate-repeating" style="width:auto!important;">I would like this donation to automatically repeat each month </label>');
 
 
 /**
@@ -92,7 +105,7 @@ jQuery(document).ready(function(){
 	jQuery('#dgx-donate-form-donor-section').children('#donation_header').children('h2').wrapInner('<legend>');
 	jQuery('#dgx-donate-form-donor-section').wrapInner('<fieldset id="donor_info">');
 	
-	jQuery('#dgx-donate-form-donor-section').children('#donation_header', '#_dgx_donate_donor_first_name', '#_dgx_donate_donor_last_name', '#_dgx_donate_donor_email', '#_dgx_donate_add_to_mailing_list', '#_dgx_donate_donor_phone').wrapAll('<fieldset id="donor-info" />');
+	//jQuery('#dgx-donate-form-donor-section').children('#donation_header', '#_dgx_donate_donor_first_name', '#_dgx_donate_donor_last_name', '#_dgx_donate_donor_email', '#_dgx_donate_add_to_mailing_list', '#_dgx_donate_donor_phone').wrapAll('<fieldset id="donor-info" />');
 
 	jQuery('#_dgx_donate_donor_first_name').find('label').replaceWith('<label for="_dgx_donate_donor_first_name">First Name: </label><span class="dgx-donate-comment">(required)</span></label>');
 
@@ -102,7 +115,7 @@ jQuery(document).ready(function(){
 
 	jQuery('#_dgx_donate_donor_phone').find('label').replaceWith('<label for="_dgx_donate_donor_phone">Phone: </label><span class="dgx-donate-comment">(required)</span></label>');
 
-	jQuery('#_dgx_donate_add_to_mailing_list').contents().eq(2).wrap('<label for="_dgx_donate_add_to_mailing_list" />')
+	jQuery('#_dgx_donate_add_to_mailing_list').contents().eq(2).wrap('<label for="_dgx_donate_add_to_mailing_list" />');
 
 	jQuery('input[name=_dgx_donate_donor_first_name]').attr('id', '_dgx_donate_donor_first_name');
 	jQuery('input[name=_dgx_donate_donor_last_name]').attr('id', '_dgx_donate_donor_last_name');
@@ -116,7 +129,7 @@ jQuery(document).ready(function(){
 	jQuery('input[name=_dgx_donate_donor_phone]').attr('required', 'required');
 
 
-	jQuery('input[name=_dgx_donate_donor_first_name]').attr('ng-model', 'first_name');
+	//jQuery('input[name=_dgx_donate_donor_first_name]').attr('ng-model', 'first_name');
 	jQuery('input[name=_dgx_donate_donor_last_name]').attr('ng-model', 'last_name');
 	jQuery('input[name=_dgx_donate_donor_email]').attr('ng-model', 'email');
 	jQuery('input[name=_dgx_donate_donor_phone]').attr('ng-model', 'phone');
