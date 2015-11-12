@@ -22,12 +22,13 @@ jQuery(document).ready(function(){
 	jQuery('input[value=2500]').attr('id', '_dgx_donate_giving_level_2500');
 	jQuery('input[value=5000]').attr('id', '_dgx_donate_giving_level_5000');
 
-	jQuery('input[value=100]').attr('name', '_dgx_donate_giving_level_100');
-	jQuery('input[value=500]').attr('name', '_dgx_donate_giving_level_500');
-	jQuery('input[value=1000]').attr('name', '_dgx_donate_giving_level_1000');
-	jQuery('input[value=2500]').attr('name', '_dgx_donate_giving_level_2500');
-	jQuery('input[value=5000]').attr('name', '_dgx_donate_giving_level_5000');
-	jQuery('input[id=dgx-donate-other-radio]').attr('name', 'dgx-donate-other-radio');
+	//Bobby: all inputs should have same name to make only one selectable!
+	//jQuery('input[value=100]').attr('name', '_dgx_donate_giving_level_100');
+	//jQuery('input[value=500]').attr('name', '_dgx_donate_giving_level_500');
+	//jQuery('input[value=1000]').attr('name', '_dgx_donate_giving_level_1000');
+	//jQuery('input[value=2500]').attr('name', '_dgx_donate_giving_level_2500');
+	//jQuery('input[value=5000]').attr('name', '_dgx_donate_giving_level_5000');
+	//jQuery('input[id=dgx-donate-other-radio]').attr('name', 'dgx-donate-other-radio');
 
 	jQuery('input[value=100]').attr('aria-labelledby', 'Friend ($100)');
 	jQuery('input[value=500]').attr('aria-labelledby', 'Sponsor ($500)');
@@ -41,9 +42,9 @@ jQuery(document).ready(function(){
 	jQuery('#dgx-donate-form-donation-section').remove('#header_desc');
 
 	
-	jQuery('#dgx-donate-form-donation-section').wrapInner('<fieldset id="donation_options">');
+	jQuery('#dgx-donate-form-donation-section').wrapInner('<fieldset id="donation_options"></fieldset>');
 	
-//jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
+	//jQuery('#donation_options').children('#header_desc').children('p').wrapInner('<legend>');
 	jQuery('#donation_options').children('#donation_header').prependTo('#dgx-donate-form-donation-section');
 
 
@@ -61,8 +62,8 @@ jQuery(document).ready(function(){
  * Tribute Gift 
  */
 
-	jQuery('#dgx-donate-form-tribute-section').children('#donation_header').children('h2').wrapInner('<legend>');
-	jQuery('#dgx-donate-form-tribute-section').wrapInner('<fieldset id="tribute_gift_info">');
+	jQuery('#dgx-donate-form-tribute-section').children('#donation_header').children('h2').wrapInner('<legend></legend>');
+	jQuery('#dgx-donate-form-tribute-section').wrapInner('<fieldset id="tribute_gift_info"></fieldset>');
 	
 
 	jQuery('#_dgx_donate_tribute_gift').text('');
@@ -106,8 +107,8 @@ jQuery(document).ready(function(){
 /*
  * Donor Information 
  */
-	jQuery('#dgx-donate-form-donor-section').children('#donation_header').children('h2').wrapInner('<legend>');
-	jQuery('#dgx-donate-form-donor-section').wrapInner('<fieldset id="donor_info">');
+	jQuery('#dgx-donate-form-donor-section').children('#donation_header').children('h2').wrapInner('<legend></legend>');
+	jQuery('#dgx-donate-form-donor-section').wrapInner('<fieldset id="donor_info"></fieldset>');
 	
 	//jQuery('#dgx-donate-form-donor-section').children('#donation_header', '#_dgx_donate_donor_first_name', '#_dgx_donate_donor_last_name', '#_dgx_donate_donor_email', '#_dgx_donate_add_to_mailing_list', '#_dgx_donate_donor_phone').wrapAll('<fieldset id="donor-info" />');
 
@@ -132,11 +133,11 @@ jQuery(document).ready(function(){
 	jQuery('input[name=_dgx_donate_donor_email]').attr('required', 'required');
 	jQuery('input[name=_dgx_donate_donor_phone]').attr('required', 'required');
 
-
-	jQuery('input[name=_dgx_donate_donor_first_name]').attr('ng-model', 'first_name');
-	jQuery('input[name=_dgx_donate_donor_last_name]').attr('ng-model', 'last_name');
-	jQuery('input[name=_dgx_donate_donor_email]').attr('ng-model', 'email');
-	jQuery('input[name=_dgx_donate_donor_phone]').attr('ng-model', 'phone');
+	//Bobby: 13Nov2015, disabling AngularJS code
+	//jQuery('input[name=_dgx_donate_donor_first_name]').attr('ng-model', 'first_name');
+	//jQuery('input[name=_dgx_donate_donor_last_name]').attr('ng-model', 'last_name');
+	//jQuery('input[name=_dgx_donate_donor_email]').attr('ng-model', 'email');
+	//jQuery('input[name=_dgx_donate_donor_phone]').attr('ng-model', 'phone');
 
 
 	jQuery('input[name=_dgx_donate_donor_first_name]').attr('aria-labelledby', 'Firstname label');
@@ -154,8 +155,8 @@ jQuery(document).ready(function(){
 /**
  * Donor Address 
  */
-	jQuery('#dgx-donate-form-billing-section').children('#donation_header').children('h2').wrapInner('<legend>');
-	jQuery('#dgx-donate-form-billing-section').wrapInner('<fieldset id="donor_info_address">');
+	jQuery('#dgx-donate-form-billing-section').children('#donation_header').children('h2').wrapInner('<legend></legend>');
+	jQuery('#dgx-donate-form-billing-section').wrapInner('<fieldset id="donor_info_address"></fieldset>');
 	
 
 	jQuery('#_dgx_donate_donor_address').find('label').replaceWith('<label for="_dgx_donate_donor_address">Address: </label><span class="dgx-donate-comment">(required)</span></label>');
@@ -171,8 +172,9 @@ jQuery(document).ready(function(){
 	jQuery('select[name=_dgx_donate_donor_state]').attr('id', '_dgx_donate_donor_state'); 				
 	jQuery('select[name=_dgx_donate_donor_country]').attr('id', '_dgx_donate_donor_country');
 
-	jQuery('input[name=_dgx_donate_donor_address]').attr('ng-model', 'address');
-	jQuery('input[name=_dgx_donate_donor_city]').attr('ng-model', 'city');
+	//Bobby: 13Nov2015, disabling AngularJS code
+	//jQuery('input[name=_dgx_donate_donor_address]').attr('ng-model', 'address');
+	//jQuery('input[name=_dgx_donate_donor_city]').attr('ng-model', 'city');
 
 	jQuery('input[name=_dgx_donate_donor_address]').attr('required', 'required');
 	jQuery('input[name=_dgx_donate_donor_city]').attr('required', 'required');
@@ -190,5 +192,6 @@ jQuery(document).ready(function(){
 	jQuery('input[name=dgx-donate-pay-enabled]').attr('alt', 'Donate Now');
 	jQuery('input[name=dgx-donate-pay-disabled]').attr('alt', 'Donate button disabled');
 	jQuery('input[name=dgx-donate-busy]').attr('alt', 'Processing transaction');
+	
 
 });

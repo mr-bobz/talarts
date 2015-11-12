@@ -1338,17 +1338,29 @@ a{
 	font-size: 18px;
 }
 
-@media screen and (min-width: 783px) {
-    
-.main-navigation .focus > ul {
-	display : block !important;
+@media screen and (min-width: 783px) {    
+	.main-navigation .focus > ul {
+		display : block !important;
+	}
+
+	.main-navigation ul.nav-menu ul.sub-menu {
+		display : none;
+	}
 }
 
-.main-navigation ul.nav-menu ul.sub-menu {
-	display : none;
-}
-
-}
 #breadcrumbs{
 	background-color: linen;
 }
+
+.mejs-controls .mejs-button button,
+.mejs-controls{
+	color: white;
+}
+
+#other_radio_button{
+	display: none;
+}
+
+/*.dgx-donate-form-section{
+	display: none;
+}*/

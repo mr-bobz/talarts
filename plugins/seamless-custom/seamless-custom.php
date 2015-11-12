@@ -27,6 +27,7 @@ add_action( 'wp_enqueue_scripts','seamless_custom_queue_jQuery');
 
 function seamless_custom_queue_angular  () {
 	
+	wp_enqueue_script( 'seemless_custom_angular', plugins_url( '/js/angular.min.js' , __FILE__ ));
 	wp_enqueue_script( 'seemless_custom_angular', plugins_url( '/js/form_focus.js' , __FILE__ ));
 	
 }
@@ -60,8 +61,8 @@ function modify_donation_level_name($array){
 	$array['elements']['dgx_donate_giving_level_100']['prompt'] = '<label for="_dgx_donate_giving_level_100">Friend ($100)</label>';
    	$array['elements']['dgx_donate_giving_level_500']['prompt'] = '<label for="_dgx_donate_giving_level_500">Sponsor ($500)</label>';
    	$array['elements']['dgx_donate_giving_level_1000']['prompt'] = '<label for="_dgx_donate_giving_level_1000">Patron ($1000)</label>';
-    	$array['elements']['dgx_donate_giving_level_2500']['prompt'] = '<label for="_dgx_donate_giving_level_2500">Benefactor ($2500)</label>';
-    	$array['elements']['dgx_donate_giving_level_5000']['prompt'] = '<label for="_dgx_donate_giving_level_5000">Angel ($5000)</label>';
+    $array['elements']['dgx_donate_giving_level_2500']['prompt'] = '<label for="_dgx_donate_giving_level_2500">Benefactor ($2500)</label>';
+    $array['elements']['dgx_donate_giving_level_5000']['prompt'] = '<label for="_dgx_donate_giving_level_5000">Angel ($5000)</label>';
 	$array['elements']['dgx-donate-other-radio']['prompt'] = '<label for="dgx-donate-other-radio">Other</label>';
 
     return $array;
