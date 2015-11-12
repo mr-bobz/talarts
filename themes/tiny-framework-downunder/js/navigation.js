@@ -77,9 +77,11 @@
 	var topMenuItemList = jQuery("#primary-menu").children("li");
 	var subMenuULs = jQuery("#primary-menu").children("li").children("ul");
 	var menu_label = ["services","support","about"];
+    var a_aria_label = ["Services Sub Menu","Support Sub Menu","About Sub Menu"];
 	for(var index=1;index<=3;index++){
 		jQuery(subMenuULs[index-1]).attr('aria-label',menu_label[index-1]);
 		jQuery(topMenuItemList[index]).children('a').attr('aria-haspopup','true');
+        jQuery(topMenuItemList[index]).children('a').attr('aria-label',a_aria_label[index-1]);
 		jQuery(topMenuItemList[index]).children('a').attr('role','menuitem');
 	}
 	//keep-end
